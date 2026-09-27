@@ -5,26 +5,32 @@
 }
 
 
+html,
 body {
+    width: 100%;
+    height: 100%;
+
     font-family: Arial, sans-serif;
 
     background: #f1f5f9;
-
-    min-height: 100vh;
 
     overflow: hidden;
 }
 
 
+/* ================= DASHBOARD ================= */
+
 .dashboard {
     display: flex;
 
     width: 100%;
-
     height: 100vh;
+
+    overflow: hidden;
 }
 
 
+/* ================= SIDEBAR ================= */
 
 .sidebar {
     width: 220px;
@@ -33,7 +39,7 @@ body {
 
     background: #1e293b;
 
-    padding: 25px 15px;
+    padding: 20px 15px;
 
     color: white;
 
@@ -50,11 +56,15 @@ body {
 .sidebar h2 {
     text-align: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     font-size: 22px;
+
+    flex-shrink: 0;
 }
 
+
+/* Sidebar Links */
 
 .sidebar a {
     display: block;
@@ -63,18 +73,21 @@ body {
 
     color: #cbd5e1;
 
-    padding: 12px;
+    padding: 11px;
 
     border-radius: 5px;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 
     font-size: 14px;
 
     transition: 0.2s;
+
+    flex-shrink: 0;
 }
 
 
+/* Only hovered link */
 
 .sidebar a:hover {
     background: #334155;
@@ -83,6 +96,7 @@ body {
 }
 
 
+/* Active link */
 
 .sidebar a.active {
     background: #334155;
@@ -91,11 +105,12 @@ body {
 }
 
 
+/* ================= LOGOUT ================= */
 
 .sidebar button {
     width: 100%;
 
-    padding: 11px;
+    padding: 10px;
 
     border: none;
 
@@ -111,7 +126,7 @@ body {
 
     margin-top: auto;
 
-    transition: 0.2s;
+    flex-shrink: 0;
 }
 
 
@@ -120,9 +135,12 @@ body {
 }
 
 
+/* ================= MAIN CONTENT ================= */
 
 .main-content {
     flex: 1;
+
+    min-width: 0;
 
     height: 100vh;
 
@@ -133,6 +151,8 @@ body {
     overflow-x: hidden;
 }
 
+
+/* Scrollbar */
 
 .main-content::-webkit-scrollbar {
     width: 7px;
@@ -146,6 +166,7 @@ body {
 }
 
 
+/* ================= TOPBAR ================= */
 
 .topbar {
     margin-bottom: 20px;
@@ -168,6 +189,7 @@ body {
 }
 
 
+/* ================= WELCOME ================= */
 
 .welcome-card {
     background: white;
@@ -201,6 +223,7 @@ body {
 }
 
 
+/* ================= SMALL CARDS ================= */
 
 .cards {
     display: grid;
@@ -238,6 +261,7 @@ body {
 }
 
 
+/* ================= USER DATA ================= */
 
 .user-card {
     background: white;
@@ -286,6 +310,7 @@ body {
 }
 
 
+/* ================= PROFILE ================= */
 
 .page-section {
     display: none;
@@ -370,6 +395,7 @@ body {
 }
 
 
+/* ================= SETTINGS ================= */
 
 .settings-card {
     background: white;
@@ -442,6 +468,7 @@ body {
 }
 
 
+/* ================= PASSWORD ================= */
 
 .password-box {
     display: none;
@@ -483,41 +510,54 @@ body {
 }
 
 
-
-   
+/* ================= TABLET / MOBILE ================= */
 
 @media (max-width: 700px) {
 
     .sidebar {
-        width: 150px;
+        width: 145px;
 
-        padding: 20px 10px;
+        height: 100vh;
+
+        padding: 15px 9px;
+
+        overflow: hidden;
     }
 
 
     .sidebar h2 {
-        font-size: 18px;
+        font-size: 17px;
 
-        margin-bottom: 25px;
+        margin-bottom: 18px;
     }
 
 
     .sidebar a {
-        font-size: 12px;
+        font-size: 11px;
 
-        padding: 10px 8px;
+        padding: 9px 7px;
+
+        margin-bottom: 3px;
     }
 
 
     .sidebar button {
-        font-size: 12px;
+        font-size: 11px;
 
         padding: 9px;
+
+        margin-top: auto;
     }
 
 
     .main-content {
+        height: 100vh;
+
         padding: 15px;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
     }
 
 
@@ -528,6 +568,16 @@ body {
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+
+    .welcome-card {
+        padding: 20px;
+    }
+
+
+    .user-card {
+        padding: 20px;
     }
 
 
@@ -552,29 +602,47 @@ body {
 }
 
 
+/* ================= SMALL MOBILE ================= */
+
 @media (max-width: 450px) {
 
     .sidebar {
-        width: 125px;
+        width: 115px;
 
-        padding: 15px 8px;
+        padding: 12px 7px;
     }
 
 
     .sidebar h2 {
-        font-size: 16px;
+        font-size: 15px;
+
+        margin-bottom: 15px;
     }
 
 
     .sidebar a {
-        font-size: 11px;
+        font-size: 10px;
 
-        padding: 9px 6px;
+        padding: 8px 5px;
+
+        margin-bottom: 2px;
+    }
+
+
+    .sidebar button {
+        font-size: 10px;
+
+        padding: 8px 5px;
     }
 
 
     .main-content {
         padding: 12px;
+    }
+
+
+    .topbar h1 {
+        font-size: 21px;
     }
 
 
