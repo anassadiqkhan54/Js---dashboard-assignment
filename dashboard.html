@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard">
+
+
+
+        <aside class="sidebar">
+
+            <h2>My Panel</h2>
+
+
+            <a href="#" id="dashboardBtn" class="active">
+                Dashboard
+            </a>
+
+
+            <a href="#" id="profileBtn">
+                My Profile
+            </a>
+
+
+            <a href="#" id="settingsBtn">
+                Settings
+            </a>
+
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </aside>
+
+
+
+
+        <main class="main-content">
+
+
+
+            <section id="dashboardSection">
+
+                <div class="topbar">
+
+                    <div>
+
+                        <h1>Dashboard</h1>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="welcome-card">
+
+                    <div>
+
+                        <h2>
+                            Welcome,
+                            <span id="welcomeName"></span> 
+                        </h2>
+
+                        <p>
+                            Here is your account information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="cards">
+
+                    <div class="small-card">
+
+                        <h3>User</h3>
+
+                        <p>Registered Account</p>
+
+                    </div>
+
+
+                    <div class="small-card">
+
+                        <h3>Country</h3>
+
+                        <p id="cardCountry"></p>
+
+                    </div>
+
+
+                    <div class="small-card">
+
+                        <h3>Age</h3>
+
+                        <p id="cardAge"></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="user-card">
+
+                    <h2>Login User Data</h2>
+
+
+                    <div class="user-info">
+
+                        <div class="info-row">
+
+                            <span>Username</span>
+
+                            <strong id="showName"></strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Email</span>
+
+                            <strong id="showEmail"></strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Password</span>
+
+                            <strong id="showPassword"></strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Age</span>
+
+                            <strong id="showAge"></strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Country</span>
+
+                            <strong id="showCountry"></strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Date of Birth</span>
+
+                            <strong id="showDob"></strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+            <section id="profileSection" class="page-section">
+
+
+                <div class="topbar">
+
+                    <h1>My Profile</h1>
+
+                    <p>Personal information</p>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-icon">
+                        👤
+                    </div>
+
+
+                    <h2 id="profileName"></h2>
+
+                    <p id="profileEmail"></p>
+
+
+                    <div class="profile-info">
+
+                        <div>
+                            <span>Age</span>
+                            <strong id="profileAge"></strong>
+                        </div>
+
+
+                        <div>
+                            <span>Country</span>
+                            <strong id="profileCountry"></strong>
+                        </div>
+
+
+                        <div>
+                            <span>Date of Birth</span>
+                            <strong id="profileDob"></strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+            <section id="settingsSection" class="page-section">
+
+
+                <div class="topbar">
+
+                    <h1>Settings</h1>
+
+                    <p>Manage your account settings</p>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <h2>Account Settings</h2>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <strong>Account Email</strong>
+
+                            <p id="settingsEmail"></p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <strong>Change Password</strong>
+
+                            <p>Update your account password</p>
+
+                        </div>
+
+                        <button id="changePasswordBtn">
+                            Change
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="passwordBox"
+                        class="password-box"
+                    >
+
+                        <input
+                            type="password"
+                            id="newPassword"
+                            placeholder="New password"
+                        >
+
+                        <small id="passwordError"></small>
+
+
+                        <button id="savePasswordBtn">
+                            Save Password
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

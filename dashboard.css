@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f1f5f9;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+
+.dashboard {
+    display: flex;
+
+    width: 100%;
+
+    height: 100vh;
+}
+
+
+
+.sidebar {
+    width: 220px;
+
+    height: 100vh;
+
+    background: #1e293b;
+
+    padding: 25px 15px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+
+.sidebar h2 {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 22px;
+}
+
+
+.sidebar a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #cbd5e1;
+
+    padding: 12px;
+
+    border-radius: 5px;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+
+.sidebar a:hover {
+    background: #334155;
+
+    color: white;
+}
+
+
+
+.sidebar a.active {
+    background: #334155;
+
+    color: white;
+}
+
+
+
+.sidebar button {
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #dc2626;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    margin-top: auto;
+
+    transition: 0.2s;
+}
+
+
+.sidebar button:hover {
+    background: #b91c1c;
+}
+
+
+
+.main-content {
+    flex: 1;
+
+    height: 100vh;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+
+.main-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+
+.topbar {
+    margin-bottom: 20px;
+}
+
+
+.topbar h1 {
+    color: #1e293b;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+
+.topbar p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+
+.welcome-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+
+.welcome-card h2 {
+    color: #222;
+
+    margin-bottom: 7px;
+}
+
+
+.welcome-card span {
+    color: #2563eb;
+}
+
+
+.welcome-card p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.small-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+
+.small-card h3 {
+    color: #2563eb;
+
+    margin-bottom: 8px;
+}
+
+
+.small-card p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+
+.user-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+
+    margin-bottom: 30px;
+}
+
+
+.user-card h2 {
+    margin-bottom: 15px;
+
+    color: #222;
+}
+
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 13px 5px;
+
+    border-bottom: 1px solid #eee;
+
+    gap: 20px;
+}
+
+
+.info-row span {
+    color: #777;
+}
+
+
+.info-row strong {
+    color: #222;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+
+
+.page-section {
+    display: none;
+}
+
+
+.profile-card {
+    background: white;
+
+    max-width: 600px;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+
+    text-align: center;
+}
+
+
+.profile-icon {
+    width: 70px;
+
+    height: 70px;
+
+    background: #e0e7ff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+
+.profile-card h2 {
+    margin-bottom: 5px;
+
+    color: #222;
+}
+
+
+.profile-card > p {
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+.profile-info {
+    text-align: left;
+}
+
+
+.profile-info div {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 14px 5px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.profile-info span {
+    color: #777;
+}
+
+
+.profile-info strong {
+    color: #222;
+}
+
+
+
+.settings-card {
+    background: white;
+
+    max-width: 700px;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+
+.settings-card h2 {
+    margin-bottom: 20px;
+
+    color: #222;
+}
+
+
+.setting-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 5px;
+
+    border-bottom: 1px solid #eee;
+
+    gap: 15px;
+}
+
+
+.setting-row strong {
+    color: #333;
+}
+
+
+.setting-row p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+.setting-row button,
+#savePasswordBtn {
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 9px 16px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.setting-row button:hover,
+#savePasswordBtn:hover {
+    background: #1d4ed8;
+}
+
+
+
+.password-box {
+    display: none;
+
+    padding-top: 18px;
+}
+
+
+.password-box input {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    margin-bottom: 5px;
+}
+
+
+.password-box input:focus {
+    border-color: #2563eb;
+}
+
+
+.password-box small {
+    display: block;
+
+    color: red;
+
+    font-size: 12px;
+
+    min-height: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+
+   
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 150px;
+
+        padding: 20px 10px;
+    }
+
+
+    .sidebar h2 {
+        font-size: 18px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .sidebar a {
+        font-size: 12px;
+
+        padding: 10px 8px;
+    }
+
+
+    .sidebar button {
+        font-size: 12px;
+
+        padding: 9px;
+    }
+
+
+    .main-content {
+        padding: 15px;
+    }
+
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-row {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .info-row strong {
+        text-align: left;
+    }
+
+
+    .profile-info div {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .sidebar {
+        width: 125px;
+
+        padding: 15px 8px;
+    }
+
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+
+    .sidebar a {
+        font-size: 11px;
+
+        padding: 9px 6px;
+    }
+
+
+    .main-content {
+        padding: 12px;
+    }
+
+
+    .setting-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

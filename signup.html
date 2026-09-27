@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="signup-container">
+
+        <div class="signup-card">
+
+            <div class="signup-header">
+                <h1>Create Account</h1>
+            </div>
+
+
+            <form id="signupForm">
+
+                <div class="input-box">
+
+                    <label>Username</label>
+
+                    <input type="text"
+                        id="name"
+                        placeholder="Enter username">
+
+                    <small id="errorname"></small>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>Email</label>
+
+                    <input type="email"
+                        id="email"
+                        placeholder="Enter email">
+
+                    <small id="erroremail"></small>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>Password</label>
+
+                    <input type="password"
+                        id="password"
+                        placeholder="Minimum 8 characters">
+
+                    <small id="errorpassword"></small>
+
+                </div>
+
+
+                <div class="two-fields">
+
+                    <div class="input-box">
+
+                        <label>Age</label>
+
+                        <input type="number"
+                            id="age"
+                            placeholder="Age">
+
+                        <small id="errorage"></small>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label>Country</label>
+
+                        <select id="country">
+
+                            <option value="">Select</option>
+
+                            <option value="Pakistan">
+                                Pakistan
+                            </option>
+
+                            <option value="India">
+                                India
+                            </option>
+
+                            <option value="China">
+                                China
+                            </option>
+
+                            <option value="Saudi Arabia">
+                                Saudi Arabia
+                            </option>
+
+                        </select>
+
+                        <small id="errorcountry"></small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>Date of Birth</label>
+
+                    <input type="date"
+                        id="dob">
+
+                    <small id="errordob"></small>
+
+                </div>
+
+
+                <button type="submit" id="signBtn">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="login-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>
