@@ -13,7 +13,6 @@ let cardAge = document.getElementById("cardAge");
 let logoutBtn = document.getElementById("logoutBtn");
 
 
-// Sidebar buttons
 
 let dashboardBtn = document.getElementById("dashboardBtn");
 let profileBtn = document.getElementById("profileBtn");
